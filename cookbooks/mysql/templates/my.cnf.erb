@@ -1,0 +1,21 @@
+[mysqld]
+
+user = root
+
+# Налаштування пароля для root
+password = <password>
+
+# Налаштування сервера
+port = 3306
+bind-address = 0.0.0.0
+
+# Налаштування пам'яті
+max_connections = 1000
+innodb_buffer_pool_size = 1024M
+
+# Налаштування журналювання
+log_bin = /var/log/mysql/mysql-bin.log
+server_id = 1
+
+# Налаштування безпеки
+sql_mode = NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION

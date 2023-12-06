@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerName localhost
+  
+    # Static content
+    <Location /static>
+      AllowOverride None
+      Order Allow,Deny
+      Allow from all
+    </Location>
+  
+    # Dynamic content
+    <Location /dynamic>
+      ProxyPass http://127.0.0.1:9080/dynamic/
+      ProxyPassReverse http://127.0.0.1:9080/dynamic/
+    </Location>
+  </VirtualHost>
+  
